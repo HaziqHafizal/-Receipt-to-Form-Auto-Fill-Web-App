@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm uninstall *)",
+      "Bash(taskkill /PID 149120 /F)",
+      "PowerShell(Stop-Process -Id 149120 -Force -ErrorAction SilentlyContinue)"
+    ]
+  }
+}

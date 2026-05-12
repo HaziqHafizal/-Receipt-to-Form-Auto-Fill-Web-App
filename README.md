@@ -1,7 +1,6 @@
 # Receipt to Form Auto-Fill Web App
-
 A web app that extracts information from receipt images and PDFs using generative AI and auto-fills a form with the results.
-
+Live Vercel URL: https://receipt-to-form-auto-fill-web-app-silk.vercel.app/
 ## Features
 
 - Upload a receipt via drag & drop or file picker (JPG, PNG, WEBP, PDF)
@@ -21,33 +20,12 @@ A web app that extracts information from receipt images and PDFs using generativ
 | Database | MongoDB Atlas + Mongoose |
 | Hosting | Vercel |
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- A [Groq API key](https://console.groq.com) (free, no credit card)
-- A [MongoDB Atlas](https://cloud.mongodb.com) connection string (free tier)
-
 ### Installation
 
 ```bash
 git clone https://github.com/HaziqHafizal/-Receipt-to-Form-Auto-Fill-Web-App.git
 cd -Receipt-to-Form-Auto-Fill-Web-App
 npm install
-```
-
-### Environment Variables
-
-Copy the example file and fill in your keys:
-
-```bash
-cp .env.local.example .env.local
-```
-
-```env
-GROQ_API_KEY=your_groq_api_key_here
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/receipt-extractor
 ```
 
 ### Run Locally
@@ -91,19 +69,6 @@ lib/
   mongodb.ts               # Singleton MongoDB connection for serverless
   models/receipt.ts        # Mongoose schema
 ```
-
-## Deployment
-
-This app is deployed on Vercel. To deploy your own:
-
-1. Push to GitHub
-2. Import project in [Vercel dashboard](https://vercel.com)
-3. Add `GROQ_API_KEY` and `MONGODB_URI` as environment variables
-4. Deploy
-
-> **Note:** In MongoDB Atlas, go to **Network Access** and allow `0.0.0.0/0` so Vercel's servers can connect.
-
-## Extracted Fields
 
 | Field | Description |
 |---|---|
